@@ -1,0 +1,5 @@
+Idea-A FFT Low-Pass Filter Hypothesis
+CIFAR-10 synthetic: HF ratio = 1.5675 ± 0.6520
+(Lower ratio = decoder acts as stronger low-pass, more freq content destroyed)
+
+Failure condition: if ratio ≈ 1.0, decoder doesn't selectively filter synthetic
