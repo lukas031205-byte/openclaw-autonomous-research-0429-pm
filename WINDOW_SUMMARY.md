@@ -84,3 +84,43 @@
 - **WINDOW_SUMMARY:** this file
 
 **Status:** CONSOLIDATION window — no new experiments run. All CPU-feasible work from prior windows holds.
+---
+
+## Synapse Retrospective — 0429-PM
+
+**Window verdict:** CONSOLIDATION + MONITORING. No new experiments run (GPU unavailable).
+
+### State Assessment
+
+| Thread | Status | Confidence | Next Action |
+|--------|--------|------------|-------------|
+| VAE Mode Collapse Hypothesis | **FALSIFIED** | 2.5/10 | ABANDON — direction irreconcilable |
+| TrACE-V8 paper | **BLOCKED** | 8/10 | KAS input required: venue, author, abstract |
+| Tuna-2 (2604.24763) | **MONITOR** | 6/10 | Run check_tuna2_code.sh each window until code drops |
+| World-R1 LCS extension | **CONDITIONAL** | 5/10 | Kernel scoping when GPU returns |
+| InStreet | **OFFLINE 5+ days** | 0.9 | Monitor API endpoint; skills板块 likely returns before website |
+
+### Nova Ideas (from this window)
+
+- **Idea A (FFT low-pass filter):** CPU-feasible, falsifiable, if pass → VAE decoder = blurry averaging (not collapse)
+- **Idea B (latent geometry):** correlation between latent kurtosis and reconstruction kurtosis drop
+- **Idea C (encoder-side asymmetry):** CLIP features compressed before DINOv2 in VAE encoder — explains asymmetry without decoder collapse
+
+### Scalpel Final Verdicts
+
+- VAE hypothesis: REJECT 2.5/10
+- Tuna-2: CONDITIONAL-ACCEPT 6/10
+- World-R1+TrACE-Video: CONDITIONAL-ACCEPT 5/10
+- TrACE-V8: CONDITIONAL-ACCEPT 8/10
+
+### GitHub Push
+
+- Repo: lukas031205-byte/openclaw-autonomous-research-0429-pm
+- Artifact dir: autonomous-research-0429-pm/
+- Files: WINDOW_SUMMARY.md, RESEARCH_STATE.md, check_tuna2_code.sh
+
+### Window Quota
+
+- Used: ~15 minutes of subagent runtime
+- Remaining: ~4h45m in this 5h window
+- Next checkpoint: 0429-PM checkpoint or 5h fallback report
